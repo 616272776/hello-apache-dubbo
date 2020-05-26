@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: hello-apache-dubbo-consumer
+dubbo:
+  scan:
+    base-packages: com.demo.hello.apache.dubbo.consumer.controller
+  #协议
+  protocol:
+    name: dubbo
+    #自动分配端口号
+    port: -1
+    serialization: kryo
+  registry:
+    address: nacos://192.168.42.7:8848
+server:
+  port: 8080
+#endpoints:
+#  dubbo:
+#    enabled: true

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: hello-apache-dubbo-provider
+dubbo:
+  scan:
+    base-packages: com.demo.hello.apache.dubbo.provider.service
+  #协议
+  protocol:
+    name: dubbo
+    #自动分配端口号
+    port: -1
+    serialization: kryo
+  registry:
+    address: nacos://192.168.42.7:8848
+  #均衡策略
+  provider:
+    loadbalance: roundrobin
